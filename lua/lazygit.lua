@@ -91,12 +91,12 @@ local function open_floating_window()
         height = height,
     }
 
-    local border_lines = {'╭' .. string.rep('─', width) .. '╮'}
+    local border_lines = {'┌' .. string.rep('─', width) .. '┐'}
     local middle_line = '│' .. string.rep(' ', width) .. '│'
     for i = 1, height do
         table.insert(border_lines, middle_line)
     end
-    table.insert(border_lines, '╰' .. string.rep('─', width) .. '╯')
+    table.insert(border_lines, '└' .. string.rep('─', width) .. '┘')
 
     -- create a unlisted scratch buffer for the border
     local border_buffer = api.nvim_create_buf(false, true)
